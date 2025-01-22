@@ -53,7 +53,7 @@ app.layout = ddk.App([
 
     ddk.Header([
         ddk.Logo(src=app.get_asset_url('logo.svg')),
-        ddk.Title('Weekly Report'),
+        ddk.Title('Weekly Report2'),
         menu
     ]),
 
