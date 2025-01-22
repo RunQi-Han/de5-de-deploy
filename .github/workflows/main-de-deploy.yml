@@ -1,0 +1,20 @@
+name: 'Dash Enterprise Deploy'
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    types: ['opened', 'edited', 'synchronize', 'closed']
+
+jobs:
+  deploy:
+    name: 'Deploy to Dash Enterprise'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: plotly/de-deploy@v2
+        with:
+          DE_HOST: ${{ secrets.DE_HOST }}
+          DE_USERNAME: ${{ secrets.DE_USERNAME }}
+          DE_PASSWORD: ${{ secrets.DE_PASSWORD }}
+          GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
