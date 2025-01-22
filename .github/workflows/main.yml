@@ -29,10 +29,10 @@ jobs:
             echo "Error: DE_PYTHON_VERSION secret is not set. Please set this at GH Org level."
             exit 1
           fi
-          if [ -z "${{ secrets.GH_REPO_ACCESS_TOKEN }}" ]; then
-            echo "Error: GH_REPO_ACCESS_TOKEN secret is not set. Please set this at GH Repo level."
-            exit 1
-          fi
+          # if [ -z "${{ secrets.GH_REPO_ACCESS_TOKEN }}" ]; then
+          #   echo "Error: GH_REPO_ACCESS_TOKEN secret is not set. Please set this at GH Repo level."
+          #   exit 1
+          # fi
           if [ -z "${{ secrets.APP_NAME }}" ]; then
             echo "Error: APP_NAME secret is not set. Please set this at GH Repo level."
           fi
