@@ -5,6 +5,7 @@ import plotly.express as px
 app = Dash(__name__)
 server = app.server  # expose server variable for Procfile
 
+
 controls = [
     ddk.ControlItem(
         dcc.Dropdown(['Rear', 'Front', 'Side'], ['Rear'], multi=True),
