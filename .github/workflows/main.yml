@@ -1,10 +1,11 @@
 # GH Action to deploy a Dash production app to Dash Enterprise on a schedule based trigger
 name: Deploy App to Production on Schedule
 
-# on:
-#   schedule:
-#     # Run the workflow every day at 2:30 PM UTC (9:30 AM EST)
-#     - cron: '30 14 * * *'
+on:
+  push:
+    branches: [main]
+  pull_request:
+    types: ['opened', 'edited', 'synchronize', 'closed']
 
 jobs:
   check-secrets:
