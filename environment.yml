@@ -1,0 +1,21 @@
+name: my-conda-env
+channels:
+  - conda-forge
+dependencies:
+  - python==3.9.0
+  - dash==2.9.3
+  - gunicorn==21.2.0
+  - pandas>=1.1.5
+  - pypandoc
+  - plotly==5.14.1
+  - werkzeug==2.3.0
+  - python-dateutil~=2.8.2
+  - numpy==1.26.4
+  - pyarrow >= 0.8.0
+  - pip:
+      - --extra-index-url https://cs-22.plotly.host/packages
+      - dash-design-kit==1.6.2
+      - databricks-sql-connector==4.2.4
+      #- pyspark==3.3.0
+      - Flask==2.3.0
+      - Flask-Compress==1.9.0
