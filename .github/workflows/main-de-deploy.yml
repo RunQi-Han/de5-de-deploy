@@ -11,10 +11,11 @@ jobs:
     name: 'Deploy to Dash Enterprise'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4
       - uses: plotly/de-deploy@main
         with:
           DE_HOST: ${{ secrets.DE_HOST }}
           DE_USERNAME: ${{ secrets.DE_USERNAME }}
           DE_PASSWORD: ${{ secrets.DE_PASSWORD }}
           GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
+          de_client_version: '1.10.0rc1'
