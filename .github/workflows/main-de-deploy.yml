@@ -18,4 +18,4 @@ jobs:
           DE_USERNAME: ${{ secrets.DE_USERNAME }}
           DE_PASSWORD: ${{ secrets.DE_PASSWORD }}
           GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
-          de_client_version: '1.10.0rc1'
+          de_client_version: '1.9.5'
